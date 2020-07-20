@@ -12,9 +12,14 @@ import java.util.List;
 @RestController
 public class SubjectResource {
 
+    Topic topic;
+
     @GetMapping("/subjects")
     public List<Subject> getAllSUbject(){
 
+        TopicQuiz topicQuiz = new TopicQuiz();
+        topicQuiz.setTopicId(Long.valueOf(1));
+        topicQuiz.setTopic(topic);
         //create video content
         VideoContent videoContent = new VideoContent();
         videoContent.setVideoId("vid-1");
@@ -40,10 +45,11 @@ public class SubjectResource {
         subject.setSubjectDescription("This a lesson for testing app functionality");
 
         //Create topic object
-        Topic topic = new Topic();
+        topic = new Topic();
         topic.setSubjectId(Long.valueOf(1));
         topic.setTopicId(Long.valueOf(1));
         topic.setSubTopics(Arrays.asList(subTopic));
+        topic.setTopicQuizes(Arrays.asList(topicQuiz));
         subject.setTopics(Arrays.asList(topic));
         return Arrays.asList(subject);
     }
