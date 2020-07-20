@@ -13,7 +13,6 @@ public class SchoolsResource {
 
     @GetMapping("/schools")
     public List<School> getAllSchools(){
-        return Arrays.asList(new School(1, "mmust", "masinde Muliro"), new School(2, "uon" ,
-                "University Of Nairobi"));
+        return Arrays.asList(new School(1, "masinde Muliro"), new School(2, "University Of Nairobi"));
     }
 }
