@@ -12,7 +12,7 @@ public class User {
     private String lastName;
     private String level;
     private int  schoolId;
-    private String email;
+    private String emailAddress;
     private LearnerType learnerType;
     private String password;
     private boolean isUpdated;
@@ -60,12 +60,12 @@ public class User {
         this.schoolId = schoolId;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     public LearnerType getLearnerType() {
