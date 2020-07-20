@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Topic {
     private Long topicId;
-    private String subjectId;
+    private Long subjectId;
     private String  topicName;
     private String topicDescription;
     private String topicImageUrl;
@@ -22,11 +22,11 @@ public class Topic {
         this.topicId = topicId;
     }
 
-    public String getSubjectId() {
+    public Long getSubjectId() {
         return subjectId;
     }
 
-    public void setSubjectId(String subjectId) {
+    public void setSubjectId(Long subjectId) {
         this.subjectId = subjectId;
     }
 
