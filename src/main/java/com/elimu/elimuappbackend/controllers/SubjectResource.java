@@ -20,7 +20,7 @@ public class SubjectResource {
         subject.setSubjectName("Test Lesson");
         subject.setSubjectDescription("This a lesson for testing app functionality");
         subject.setTopics(Arrays.asList(new Topic()));
-        return Arrays.asList(new Subject());
+        return Arrays.asList(subject, subject);
     }
 
     @PostMapping("/subjects")
