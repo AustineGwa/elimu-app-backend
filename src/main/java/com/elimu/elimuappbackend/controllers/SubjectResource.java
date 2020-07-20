@@ -44,10 +44,7 @@ public class SubjectResource {
         topic.setSubjectId(Long.valueOf(1));
         topic.setTopicId(Long.valueOf(1));
         topic.setSubTopics(Arrays.asList(subTopic));
-
         subject.setTopics(Arrays.asList(topic));
-
-        subject.setTopics(Arrays.asList(new Topic()));
         return Arrays.asList(subject);
     }
 
