@@ -17,6 +17,7 @@ public class SubjectResource {
     public List<Subject> getAllSUbject(){
         Subject subject = new Subject();
         subject.setSubjectId(Long.valueOf(1));
+        subject.setSubjectIcon("https://img.icons8.com/search");
         subject.setSubjectName("Test Lesson");
         subject.setSubjectDescription("This a lesson for testing app functionality");
         subject.setTopics(Arrays.asList(new Topic()));
