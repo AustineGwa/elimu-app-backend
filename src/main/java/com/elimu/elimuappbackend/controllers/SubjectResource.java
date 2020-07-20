@@ -18,12 +18,15 @@ public class SubjectResource {
     public List<Subject> getAllSUbject(){
 
         TopicQuiz topicQuiz = new TopicQuiz();
+        topicQuiz.setTopicQuizId(Long.valueOf(1));
         topicQuiz.setTopicId(Long.valueOf(1));
         topicQuiz.setTopic(topic);
         //create video content
         VideoContent videoContent = new VideoContent();
         videoContent.setVideoId("vid-1");
         videoContent.setVideoSubTopicId(Long.valueOf(1));
+        videoContent.setVideoTitle("Vid-1");
+        videoContent.setVideoDescription("Our first video content");
 
         //create text content
         TextContent textContent = new TextContent();
@@ -34,6 +37,8 @@ public class SubjectResource {
         SubTopic subTopic = new SubTopic();
         subTopic.setSubTopicId(Long.valueOf(1));
         subTopic.setTopicId(Long.valueOf(1));
+        subTopic.setSubTopicName("Disease");
+        subTopic.setSubTopicDescription("Study of human and natural disaeses");
         subTopic.setTextContent(Arrays.asList(textContent));
         subTopic.setVideoContent(Arrays.asList(videoContent));
 
@@ -50,6 +55,8 @@ public class SubjectResource {
         topic.setTopicId(Long.valueOf(1));
         topic.setSubTopics(Arrays.asList(subTopic));
         topic.setTopicQuizes(Arrays.asList(topicQuiz));
+        topic.setTopicName("science");
+        topic.setTopicDescription("A topic about scientific occurencess");
         subject.setTopics(Arrays.asList(topic));
         return Arrays.asList(subject);
     }
