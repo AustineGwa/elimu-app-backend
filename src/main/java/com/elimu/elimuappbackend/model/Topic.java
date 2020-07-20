@@ -11,5 +11,62 @@ public class Topic {
     private List<SubTopic> subTopics;
     private List<TopicQuiz> TopicQuizes;
 
+    public Topic() {
+    }
 
+    public Long getTopicId() {
+        return topicId;
+    }
+
+    public void setTopicId(Long topicId) {
+        this.topicId = topicId;
+    }
+
+    public String getSubjectId() {
+        return subjectId;
+    }
+
+    public void setSubjectId(String subjectId) {
+        this.subjectId = subjectId;
+    }
+
+    public String getTopicName() {
+        return topicName;
+    }
+
+    public void setTopicName(String topicName) {
+        this.topicName = topicName;
+    }
+
+    public String getTopicDescription() {
+        return topicDescription;
+    }
+
+    public void setTopicDescription(String topicDescription) {
+        this.topicDescription = topicDescription;
+    }
+
+    public String getTopicImageUrl() {
+        return topicImageUrl;
+    }
+
+    public void setTopicImageUrl(String topicImageUrl) {
+        this.topicImageUrl = topicImageUrl;
+    }
+
+    public List<SubTopic> getSubTopics() {
+        return subTopics;
+    }
+
+    public void setSubTopics(List<SubTopic> subTopics) {
+        this.subTopics = subTopics;
+    }
+
+    public List<TopicQuiz> getTopicQuizes() {
+        return TopicQuizes;
+    }
+
+    public void setTopicQuizes(List<TopicQuiz> topicQuizes) {
+        TopicQuizes = topicQuizes;
+    }
 }
