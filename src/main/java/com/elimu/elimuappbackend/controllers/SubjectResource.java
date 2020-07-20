@@ -12,15 +12,10 @@ import java.util.List;
 @RestController
 public class SubjectResource {
 
-    Topic topic;
-
     @GetMapping("/subjects")
     public List<Subject> getAllSUbject(){
 
-        TopicQuiz topicQuiz = new TopicQuiz();
-        topicQuiz.setTopicQuizId(Long.valueOf(1));
-        topicQuiz.setTopicId(Long.valueOf(1));
-        topicQuiz.setTopic(topic);
+
         //create video content
         VideoContent videoContent = new VideoContent();
         videoContent.setVideoId("vid-1");
@@ -49,14 +44,29 @@ public class SubjectResource {
         subject.setSubjectName("Test Lesson");
         subject.setSubjectDescription("This a lesson for testing app functionality");
 
+        TopicQuizQuestion topicQuizQuestion = new TopicQuizQuestion();
+        topicQuizQuestion.setQuizQuestionId(Long.valueOf(1));
+        topicQuizQuestion.setTopicQuizId(Long.valueOf(1));
+
+
+        TopicQuiz topicQuiz = new TopicQuiz();
+        topicQuiz.setTopicQuizId(Long.valueOf(1));
+        topicQuiz.setTopicId(Long.valueOf(1));
+        topicQuiz.setTopicName("Science Quize");
+        topicQuiz.setQuizQuestions(Arrays.asList(topicQuizQuestion));
+
         //Create topic object
-        topic = new Topic();
+        Topic topic = new Topic();
         topic.setSubjectId(Long.valueOf(1));
         topic.setTopicId(Long.valueOf(1));
         topic.setSubTopics(Arrays.asList(subTopic));
         topic.setTopicQuizes(Arrays.asList(topicQuiz));
+
+        topicQuiz.setTopic(topic);
         topic.setTopicName("science");
         topic.setTopicDescription("A topic about scientific occurencess");
+
+
         subject.setTopics(Arrays.asList(topic));
         return Arrays.asList(subject);
     }
