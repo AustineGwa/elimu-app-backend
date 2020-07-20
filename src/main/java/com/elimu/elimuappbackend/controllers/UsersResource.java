@@ -13,10 +13,12 @@ public class UsersResource {
     @Autowired
     private UsersRepo usersRepo;
 
+    @GetMapping("/users")
     public List<User> getAllUsers(){
         return usersRepo.findAll();
     }
 
+    @PostMapping("/users")
     public User registerUser(@RequestBody User user){
       return   usersRepo.save(user);
     }
