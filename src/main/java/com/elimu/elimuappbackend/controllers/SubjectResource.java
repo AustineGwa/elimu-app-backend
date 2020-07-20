@@ -47,12 +47,8 @@ public class SubjectResource {
 
         subject.setTopics(Arrays.asList(topic));
 
-
-
-
-
         subject.setTopics(Arrays.asList(new Topic()));
-        return Arrays.asList(subject, subject);
+        return Arrays.asList(subject);
     }
 
     @PostMapping("/subjects")
